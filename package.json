@@ -1,15 +1,24 @@
 {
-    "name": "d3-dependency-wheel",
-    "version": "1.1.0",
-    "description": "Dependency Wheel",
-    "main": "js/d3.dependencyWheel.js",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/fzaninotto/DependencyWheel.git"
-    },
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/fzaninotto/DependencyWheel/issues"
-    },
-    "homepage": "https://github.com/fzaninotto/DependencyWheel#readme"
+  "name": "d3-dependency-wheel",
+  "version": "1.1.0",
+  "description": "Dependency Wheel",
+  "main": "startserver.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fzaninotto/DependencyWheel.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fzaninotto/DependencyWheel/issues"
+  },
+  "homepage": "https://github.com/fzaninotto/DependencyWheel#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "author": "",
+  "dependencies": {}
 }

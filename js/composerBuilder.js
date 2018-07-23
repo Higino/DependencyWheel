@@ -1,3 +1,42 @@
+var buildDummydependency = function () {
+  var data = {
+    packageNames: ['Pricing', 
+    'China Backend', 
+    'DataIO', 
+    'Product', 
+    'BI-Opo', 
+    'DataIO-Internal', 
+    'Order Management', 
+    'P&I Platform', 
+    'Shanghai WeChat', 
+    'China Mobile App', 
+    'Finance', 
+    'Integration Projects', 
+    'Supply Chain', 
+    'Checkout'],
+    matrix: [[0, 1, 1], // Main depends on A and B
+             [0, 0, 1], // A depends on B
+             [0, 0, 0]] // B doesn't depend on A or Main
+  };
+
+  var dummyMatrix = [];
+  for( var i=0; i < data.packageNames.length; i++){
+    var componentDependencies = [];
+    for( var ii=0; ii < data.packageNames.length; ii++){
+      var value = Math.floor(Math.random() * Math.floor(16));;
+      if( value < i )
+        value = 0;
+
+      componentDependencies.push(value);
+    } 
+    dummyMatrix.push(componentDependencies);
+  }
+  
+  data.matrix = dummyMatrix;
+
+  return data;
+};
+
 var buildMatrixFromComposerJson = function(composerjson) {
   var n = Object.keys(composerjson.require).length;
   var matrix = [];
